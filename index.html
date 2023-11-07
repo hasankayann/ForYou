@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CSS animatin, transitions and transforms</title>
+  <title>Özür Dilerim</title>
 
   <style>
     .heart {
@@ -72,14 +72,80 @@
     }
 
 
-  </style>
-</head>
 
-<body>
-  <div class="heart"></div>
-  <div class="Selam">
-    <h1>Merhaba</h1>
-    <p>Bu bir Aleynayı web developer yapalım sayfasıdır</p>
-  </div>
+
+     /* Styles for the centered button at the top */
+     .centered-button {
+        display: block;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        margin: 20px auto 0;
+        background-color: #ff3838;
+        color: white;
+        text-align: center;
+        border: none;
+        border-radius: 25px;
+        font-size: 20px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: all 3s ease;
+      }
+  
+      .centered-button:hover {
+        background-color: #ff5757;
+        transform: scale(1.05);
+      }
+  
+      /* Styles for message box */
+    #message-box {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        color: black;
+        padding: 20px;
+        border: 1px solid #ff3838;
+        border-radius: 5px;
+        z-index: 1000;
+        /* Removed transition to cover the page */
+      }
+  
+       /* Style for the centered image */
+    #after-explosion-image {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Center the image */
+        max-width: 100%; /* Ensure the image is not larger than the screen */
+        max-height: 100%; /* Ensure the image is not larger than the screen */
+        z-index: 999; /* Below the message box but above other content */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heart"></div>
+    <div class="Selam">
+      <h1>Füsun Hanımmm</h1>
+      <p>Nasılsınızz :) </p>
+    </div>
+  
+   <!-- Centered and styled button at the top -->
+  <button id="open-message-box" class="centered-button">Click Me</button>
+
+  <!-- The centered image to be displayed after clicking the button -->
+  <img id="after-explosion-image" src="https://github.com/hasankayann/ForYou/blob/main/download.jpeg" alt="Centered Image">
+
+  <script>
+    // JavaScript to handle button click and show the centered image
+    document.getElementById('open-message-box').addEventListener('click', function() {
+      document.getElementById('after-explosion-image').style.display = 'block';
+      // Optionally hide the button
+      this.style.display = 'none';
+    });
+  </script>
 </body>
 </html>
